@@ -27,6 +27,6 @@ exit 1
 else
 echo "Installing GIT...SUCCESS"
 fi 
-else 
+ 
 echo "GIT is already...INSTALLED"
-fi 
+
