@@ -16,7 +16,7 @@ exit 1
 else
 echo "Installing MYSQL..SUCCESS"
 fi 
-else
+
 echo "MYSQL is already...INSTALLED"
 
 dnf install git -y
