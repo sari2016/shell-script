@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e{33"
 N="\e[0"
 
-SOUCE_DIR="/home/ec2user/app-logs"
+SOUCE_DIR="/home/ec2-user/app-logs"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
@@ -36,7 +36,7 @@ FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14) &>>$LOG_FILE_NAME
 
 while read -r filepath
 do 
-echo "deleting file: $filepath"
+echo "deleting file: $filepath" &>>$LOG_FILE_NAME
 rm -rf $filepath
 echo "deleted files: $filepath"
 done &>>$LOG_FILE_NAME 
